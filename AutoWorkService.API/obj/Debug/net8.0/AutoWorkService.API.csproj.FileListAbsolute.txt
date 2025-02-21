@@ -1,0 +1,6 @@
+C:\Users\Saba\source\repos\BankofSaba\AutoWorkService.API\obj\Debug\net8.0\AutoWorkService.API.csproj.AssemblyReference.cache
+C:\Users\Saba\source\repos\BankofSaba\AutoWorkService.API\obj\Debug\net8.0\AutoWorkService.API.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Saba\source\repos\BankofSaba\AutoWorkService.API\obj\Debug\net8.0\AutoWorkService.API.AssemblyInfoInputs.cache
+C:\Users\Saba\source\repos\BankofSaba\AutoWorkService.API\obj\Debug\net8.0\AutoWorkService.API.AssemblyInfo.cs
+C:\Users\Saba\source\repos\BankofSaba\AutoWorkService.API\obj\Debug\net8.0\AutoWorkService.API.csproj.CoreCompileInputs.cache
+C:\Users\Saba\source\repos\BankofSaba\AutoWorkService.API\obj\Debug\net8.0\AutoWorkService.API.MvcApplicationPartsAssemblyInfo.cache

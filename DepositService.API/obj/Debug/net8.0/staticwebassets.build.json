@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "BATLGaCTfpQApS2/JD0G2B3c7kbTrmKUVfsErsbJSyo=",
+  "Source": "DepositService.API",
+  "BasePath": "_content/DepositService.API",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

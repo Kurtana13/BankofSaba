@@ -1,0 +1,6 @@
+@BankofSaba.API_HostAddress = http://localhost:5185
+
+GET {{BankofSaba.API_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

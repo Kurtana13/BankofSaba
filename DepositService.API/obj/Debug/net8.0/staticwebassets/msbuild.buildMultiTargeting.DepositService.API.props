@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\DepositService.API.props" />
+</Project>
