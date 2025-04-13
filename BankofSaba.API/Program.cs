@@ -9,10 +9,14 @@ var config = builder.Configuration;
 // Add services to the container.
 builder.Services
     .DatabaseServices(config)
-    .DependencyInjectionService()
+    .DependencyInjectionServices()
+    .AuthorizationServices()
+    .JwtAuthentication(config);
     ;
 
 builder.Services.AddControllers();
+builder.Services.AddControllers().AddNewtonsoftJson((options =>
+    options.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore));
 builder.Services.AddEndpointsApiExplorer();
 
 

@@ -32,7 +32,7 @@ namespace BankofSaba.API.Migrations
 
                     b.Property<string>("AccountNumber")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("nvarchar(450)");
 
                     b.Property<decimal>("Balance")
                         .HasPrecision(18, 2)
@@ -51,6 +51,9 @@ namespace BankofSaba.API.Migrations
                         .HasColumnType("nvarchar(450)");
 
                     b.HasKey("Id");
+
+                    b.HasIndex("AccountNumber")
+                        .IsUnique();
 
                     b.HasIndex("UserId");
 
@@ -160,13 +163,13 @@ namespace BankofSaba.API.Migrations
                     b.HasData(
                         new
                         {
-                            Id = "79825d50-f490-41ef-8bc0-cb0eb05cf049",
+                            Id = "78e30a4a-760a-478b-bdfd-bb889440df7b",
                             Name = "admin",
                             NormalizedName = "ADMIN"
                         },
                         new
                         {
-                            Id = "617e6ac2-57e2-4783-b787-8480f69a6af7",
+                            Id = "c908ec4e-5aae-4bc5-94d9-81f597f15029",
                             Name = "user",
                             NormalizedName = "USER"
                         });

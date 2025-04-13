@@ -6,14 +6,15 @@ using Microsoft.AspNetCore.Identity;
 
 namespace BankofSaba.API.Startup
 {
-    public static class DependencyInjectionServices
+    public static class DependencyInjectionService
     {
-        public static IServiceCollection DependencyInjectionService(this IServiceCollection services)
+        public static IServiceCollection DependencyInjectionServices(this IServiceCollection services)
         {
             services.AddScoped<UserManager<User>>();
             services.AddScoped<RoleManager<IdentityRole>>();
             services.AddScoped<TokenProvider>();
             services.AddScoped<IUserRepository,UserRepository>();
+            services.AddScoped<IAccountRepository,AccountRepository>();
 
             return services;
         }

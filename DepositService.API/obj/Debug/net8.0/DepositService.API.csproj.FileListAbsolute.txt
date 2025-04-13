@@ -121,6 +121,7 @@ C:\Users\Saba\source\repos\BankofSaba\DepositService.API\obj\Debug\net8.0\Deposi
 C:\Users\Saba\source\repos\BankofSaba\DepositService.API\obj\Debug\net8.0\DepositService.API.csproj.CoreCompileInputs.cache
 C:\Users\Saba\source\repos\BankofSaba\DepositService.API\obj\Debug\net8.0\DepositService.API.MvcApplicationPartsAssemblyInfo.cs
 C:\Users\Saba\source\repos\BankofSaba\DepositService.API\obj\Debug\net8.0\DepositService.API.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\Saba\source\repos\BankofSaba\DepositService.API\obj\Debug\net8.0\DepositService.API.sourcelink.json
 C:\Users\Saba\source\repos\BankofSaba\DepositService.API\obj\Debug\net8.0\staticwebassets.build.json
 C:\Users\Saba\source\repos\BankofSaba\DepositService.API\obj\Debug\net8.0\staticwebassets.development.json
 C:\Users\Saba\source\repos\BankofSaba\DepositService.API\obj\Debug\net8.0\staticwebassets\msbuild.DepositService.API.Microsoft.AspNetCore.StaticWebAssets.props

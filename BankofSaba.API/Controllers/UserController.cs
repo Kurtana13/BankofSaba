@@ -31,13 +31,26 @@ namespace BankofSaba.API.Controllers
             {
                 return BadRequest("Object is Null");
             }
-            var createdUser = await _userRepository.CreateAsync(registerViewModel);
-            if (createdUser == null)
+
+            try
             {
-                return BadRequest("User Already Exists");
+                var createdUser = await _userRepository.CreateAsync(registerViewModel);
+
+                if (createdUser == null)
+                {
+                    return BadRequest("User Already Exists");
+                }
+                await _userRepository.SaveAsync();
+                return Ok(await _tokenProvider.CreateAsync(createdUser));
             }
-            await _userRepository.SaveAsync();
-            return Ok(await _tokenProvider.CreateAsync(createdUser));
+            catch (InvalidOperationException ex)
+            {
+                return BadRequest(ex.Message);
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, "An error occurred while creating the user. Please try again later.");
+            }
         }
 
         [Route("[action]")]
@@ -56,5 +69,24 @@ namespace BankofSaba.API.Controllers
         }
 
 
+        
+        [Route("[action]/{username}")]
+        [Authorize(Policy = "SelfOrAdmin")]
+        [HttpDelete]
+        public async Task<ActionResult<User>> DeleteUser([FromRoute]string username)
+        {
+            try
+            {
+                var user = await _userRepository.GetByUsernameAsync(username);
+                _userRepository.Delete(user);
+                await _userRepository.SaveAsync();
+                return Ok(user);
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
+        }
+        
     }
 }

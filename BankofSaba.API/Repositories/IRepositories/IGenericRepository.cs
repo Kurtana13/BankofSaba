@@ -10,11 +10,11 @@ namespace BankofSaba.API.Repositories.IRepositories
             string includeProporties = "");
 
         Task<T> GetByIdAsync(object id);
-        Task CreateAsync(T entity);
-        void Update(T entity);
-        void Delete(T entity);
+        Task<T> CreateAsync(T entity);
+        T Update(T entity);
+        T Delete(T entity);
         Task<IEnumerable<T>> DeleteAsync(Expression<Func<T, bool>> filter = null);
-        Task DeleteByIdAsync(object id);
+        Task<T> DeleteByIdAsync(object id);
         Task SaveAsync();
     }
 }

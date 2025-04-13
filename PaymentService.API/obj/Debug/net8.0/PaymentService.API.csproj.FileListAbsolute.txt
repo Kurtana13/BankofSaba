@@ -121,6 +121,7 @@ C:\Users\Saba\source\repos\BankofSaba\PaymentService.API\obj\Debug\net8.0\Paymen
 C:\Users\Saba\source\repos\BankofSaba\PaymentService.API\obj\Debug\net8.0\PaymentService.API.csproj.CoreCompileInputs.cache
 C:\Users\Saba\source\repos\BankofSaba\PaymentService.API\obj\Debug\net8.0\PaymentService.API.MvcApplicationPartsAssemblyInfo.cs
 C:\Users\Saba\source\repos\BankofSaba\PaymentService.API\obj\Debug\net8.0\PaymentService.API.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\Saba\source\repos\BankofSaba\PaymentService.API\obj\Debug\net8.0\PaymentService.API.sourcelink.json
 C:\Users\Saba\source\repos\BankofSaba\PaymentService.API\obj\Debug\net8.0\staticwebassets.build.json
 C:\Users\Saba\source\repos\BankofSaba\PaymentService.API\obj\Debug\net8.0\staticwebassets.development.json
 C:\Users\Saba\source\repos\BankofSaba\PaymentService.API\obj\Debug\net8.0\staticwebassets\msbuild.PaymentService.API.Microsoft.AspNetCore.StaticWebAssets.props

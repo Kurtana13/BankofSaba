@@ -31,30 +31,29 @@ namespace BankofSaba.API.Repositories
 
                     var createdUser = await _userManager.CreateAsync(user, password);
 
-                    if (createdUser.Succeeded)
+                    if (!createdUser.Succeeded)
                     {
-                        var roleResult = await _userManager.AddToRoleAsync(user, "User");
-
-                        if (roleResult.Succeeded)
-                        {
-                            await transaction.CommitAsync(); // Commit the transaction
-                            return user; // Return created user
-                        }
-                        else
-                        {
-                            await transaction.RollbackAsync(); // Rollback if role assignment fails
-                        }
+                        throw new InvalidOperationException("Failed to create user. " + string.Join(", ", createdUser.Errors.Select(e => e.Description)));
                     }
-                    
+
+                    var roleResult = await _userManager.AddToRoleAsync(user, "User");
+
+                    if (!roleResult.Succeeded)
+                    {
+                        await transaction.RollbackAsync();
+                        throw new InvalidOperationException("Failed to assign role. " + string.Join(", ", roleResult.Errors.Select(e => e.Description)));
+                    }
+                    await transaction.CommitAsync(); // Commit the transaction
+                    return user; // Return created user
+
                 }
                 catch (Exception ex)
                 {
                     // Log or handle the exception as needed
                     await transaction.RollbackAsync(); // Rollback on error
+                    throw;
                 }
             }
-
-            return null; // Return null if user creation fails
         }
 
         public async Task<User> CreateAsync(RegisterViewModel registerViewModel)
@@ -62,7 +61,7 @@ namespace BankofSaba.API.Repositories
             return await CreateAsync(new User(registerViewModel), registerViewModel.Password!);
         }
 
-        public async Task<User> GetByUsername(string username)
+        public async Task<User> GetByUsernameAsync(string username)
         {
             return await _dbSet.FirstAsync(x => x.UserName == username);
         }

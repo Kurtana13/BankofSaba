@@ -121,6 +121,7 @@ C:\Users\Saba\source\repos\BankofSaba\LoanService.API\obj\Debug\net8.0\LoanServi
 C:\Users\Saba\source\repos\BankofSaba\LoanService.API\obj\Debug\net8.0\LoanService.API.csproj.CoreCompileInputs.cache
 C:\Users\Saba\source\repos\BankofSaba\LoanService.API\obj\Debug\net8.0\LoanService.API.MvcApplicationPartsAssemblyInfo.cs
 C:\Users\Saba\source\repos\BankofSaba\LoanService.API\obj\Debug\net8.0\LoanService.API.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\Saba\source\repos\BankofSaba\LoanService.API\obj\Debug\net8.0\LoanService.API.sourcelink.json
 C:\Users\Saba\source\repos\BankofSaba\LoanService.API\obj\Debug\net8.0\staticwebassets.build.json
 C:\Users\Saba\source\repos\BankofSaba\LoanService.API\obj\Debug\net8.0\staticwebassets.development.json
 C:\Users\Saba\source\repos\BankofSaba\LoanService.API\obj\Debug\net8.0\staticwebassets\msbuild.LoanService.API.Microsoft.AspNetCore.StaticWebAssets.props

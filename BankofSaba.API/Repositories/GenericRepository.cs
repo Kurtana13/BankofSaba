@@ -10,6 +10,7 @@ namespace BankofSaba.API.Repositories
         protected readonly ApplicationDbContext _context;
         protected readonly DbSet<T> _dbSet;
 
+        
         public GenericRepository(ApplicationDbContext context)
         {
             _context = context ?? throw new ArgumentNullException(nameof(context));
@@ -49,26 +50,30 @@ namespace BankofSaba.API.Repositories
             return await _dbSet.FindAsync(id);
         }
 
-        public async Task CreateAsync(T entity)
+        public async Task<T> CreateAsync(T entity)
         {
             if(entity == null)
                 throw new ArgumentNullException(nameof(entity));
             await _dbSet.AddAsync(entity);
+            return entity;
         }
 
-        public virtual void Update(T entity)
+        public virtual T Update(T entity)
         {
             if(entity == null)
                 throw new ArgumentNullException(nameof(entity));
             _dbSet.Attach(entity);
             _context.Entry(entity).State = EntityState.Modified;
+            return entity;
         }
 
-        public virtual void Delete(T entity)
+        public virtual T Delete(T entity)
         {
             if(entity == null)
                 throw new ArgumentNullException(nameof(entity));
             _dbSet.Remove(entity);
+
+            return entity;
         }
 
         public async Task<IEnumerable<T>> DeleteAsync(Expression<Func<T, bool>> filter = null)
@@ -88,14 +93,10 @@ namespace BankofSaba.API.Repositories
             return entitiesToDelete;
         }
 
-        public async Task DeleteByIdAsync(object id)
+        public async Task<T> DeleteByIdAsync(object id)
         {
             var entity = await GetByIdAsync(id);
-
-            if(entity != null)
-            {
-                Delete(entity);
-            }
+            return Delete(entity);
         }
 
         public async Task SaveAsync()
