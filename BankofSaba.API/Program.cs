@@ -20,21 +20,18 @@ builder.Services.AddControllers().AddNewtonsoftJson((options =>
 builder.Services.AddEndpointsApiExplorer();
 
 
-builder.Services.AddSwaggerGen(c =>
+builder.Services.AddSwaggerGen(options =>
 {
-    c.SwaggerDoc("v1", new OpenApiInfo
+    options.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme()
     {
-        Title = "My API",
-        Version = "v1"
-    });
-    c.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme
-    {
-        In = ParameterLocation.Header,
-        Description = "Please insert JWT with Bearer into field",
         Name = "Authorization",
-        Type = SecuritySchemeType.ApiKey
+        In = ParameterLocation.Header,
+        Type = SecuritySchemeType.Http,
+        Scheme = "Bearer"
     });
-    c.AddSecurityRequirement(new OpenApiSecurityRequirement {
+
+    options.AddSecurityRequirement(new OpenApiSecurityRequirement
+    {
         {
             new OpenApiSecurityScheme
             {
@@ -44,11 +41,10 @@ builder.Services.AddSwaggerGen(c =>
                     Id = "Bearer"
                 }
             },
-           new string[] { }
+            Array.Empty<string>()
         }
     });
 });
-
 
 var app = builder.Build();
 
@@ -58,6 +54,8 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI();
 }
+
+app.UseStatusCodePages();
 
 app.UseHttpsRedirection();
 

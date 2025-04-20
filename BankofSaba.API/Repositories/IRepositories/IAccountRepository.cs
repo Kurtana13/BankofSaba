@@ -7,5 +7,7 @@ namespace BankofSaba.API.Repositories.IRepositories
     {
         Task<Account> CreateAsync(User user, Account account);
         Task<Account> CreateAsync(User user, AccountViewModel accountViewModel);
+        Task<Account> GetByAccountNumberAsync(string accountNumber);
+        Task<List<Account>> GetAccountsByUserIdAysnc(string id);
     }
 }

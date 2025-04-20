@@ -147,3 +147,7 @@ C:\Users\Saba\source\repos\BankofSaba\BankofSaba.API\bin\Debug\net8.0\Microsoft.
 C:\Users\Saba\source\repos\BankofSaba\BankofSaba.API\bin\Debug\net8.0\Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
 C:\Users\Saba\source\repos\BankofSaba\BankofSaba.API\bin\Debug\net8.0\Newtonsoft.Json.dll
 C:\Users\Saba\source\repos\BankofSaba\BankofSaba.API\bin\Debug\net8.0\Newtonsoft.Json.Bson.dll
+C:\Users\Saba\source\repos\BankofSaba\BankofSaba.API\bin\Debug\net8.0\Microsoft.AspNetCore.Authorization.dll
+C:\Users\Saba\source\repos\BankofSaba\BankofSaba.API\bin\Debug\net8.0\Microsoft.AspNetCore.Metadata.dll
+C:\Users\Saba\source\repos\BankofSaba\BankofSaba.API\bin\Debug\net8.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Users\Saba\source\repos\BankofSaba\BankofSaba.API\bin\Debug\net8.0\Microsoft.Extensions.Logging.Abstractions.dll

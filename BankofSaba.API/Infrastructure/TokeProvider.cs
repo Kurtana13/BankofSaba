@@ -1,7 +1,7 @@
 ﻿using BankofSaba.API.Models;
 using Microsoft.AspNetCore.Identity;
-using Microsoft.IdentityModel.JsonWebTokens;
 using Microsoft.IdentityModel.Tokens;
+using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using System.Text;
 
@@ -24,7 +24,8 @@ namespace BankofSaba.API.Infrastructure
 
             var claims = new List<Claim>()
             {
-                new Claim(JwtRegisteredClaimNames.Sub, user.Id.ToString())
+                new Claim(JwtRegisteredClaimNames.Sub, user.Id.ToString()),
+                new Claim(ClaimTypes.Name,user.UserName!)
             };
 
             foreach (var role in roles)
@@ -45,9 +46,8 @@ namespace BankofSaba.API.Infrastructure
                 Audience = _configuration["Jwt:Audience"]
             };
 
-            var handler = new JsonWebTokenHandler();
-
-            return handler.CreateToken(tokenDescriptor);
+            var handler = new JwtSecurityTokenHandler();
+            return handler.WriteToken(handler.CreateToken(tokenDescriptor));
         }
     }
 }
