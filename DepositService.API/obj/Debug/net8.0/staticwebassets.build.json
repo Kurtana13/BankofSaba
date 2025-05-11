@@ -1,11 +1,23 @@
 {
   "Version": 1,
-  "Hash": "BATLGaCTfpQApS2/JD0G2B3c7kbTrmKUVfsErsbJSyo=",
+  "Hash": "8NmWH9eJrDU698MyXDlP2C9dAVdxw0bMiCsRQ7CebVM=",
   "Source": "DepositService.API",
   "BasePath": "_content/DepositService.API",
   "Mode": "Default",
   "ManifestType": "Build",
-  "ReferencedProjectsConfiguration": [],
+  "ReferencedProjectsConfiguration": [
+    {
+      "Identity": "C:\\Users\\Saba\\source\\repos\\BankofSaba\\BankofSaba.API\\BankofSaba.API.csproj",
+      "Version": 2,
+      "Source": "BankofSaba.API",
+      "GetPublishAssetsTargets": "ComputeReferencedStaticWebAssetsPublishManifest;GetCurrentProjectPublishStaticWebAssetItems",
+      "AdditionalPublishProperties": "Configuration=Debug;Platform=AnyCPU",
+      "AdditionalPublishPropertiesToRemove": "WebPublishProfileFile;TargetFramework",
+      "GetBuildAssetsTargets": "GetCurrentProjectBuildStaticWebAssetItems",
+      "AdditionalBuildProperties": "Configuration=Debug;Platform=AnyCPU",
+      "AdditionalBuildPropertiesToRemove": "WebPublishProfileFile;TargetFramework"
+    }
+  ],
   "DiscoveryPatterns": [],
   "Assets": []
 }

@@ -10,6 +10,9 @@ EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LoanService.API", "LoanService.API\LoanService.API.csproj", "{004D9640-FBFC-4AAE-B59D-40DAA43769D5}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DepositService.API", "DepositService.API\DepositService.API.csproj", "{84822D07-EC4C-4B2B-B38F-08C1D89A33DC}"
+	ProjectSection(ProjectDependencies) = postProject
+		{286462A3-C086-4411-87A9-161F6D207E71} = {286462A3-C086-4411-87A9-161F6D207E71}
+	EndProjectSection
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PaymentService.API", "PaymentService.API\PaymentService.API.csproj", "{D7C78C49-3DF0-43FB-8ABA-5F60794D4FA7}"
 EndProject

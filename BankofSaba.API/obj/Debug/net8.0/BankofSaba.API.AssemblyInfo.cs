@@ -15,7 +15,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("BankofSaba.API")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+0fed29c12aa9d6f953ff6287a7120134dd6ca876")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+103874f32c48904cb122590f1e216f7c26bc4520")]
 [assembly: System.Reflection.AssemblyProductAttribute("BankofSaba.API")]
 [assembly: System.Reflection.AssemblyTitleAttribute("BankofSaba.API")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

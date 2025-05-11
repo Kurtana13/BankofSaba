@@ -9,7 +9,7 @@ var config = builder.Configuration;
 // Add services to the container.
 builder.Services
     .DatabaseServices(config)
-    .DependencyInjectionServices()
+    .DependencyInjectionServices(config)
     .AuthorizationServices()
     .JwtAuthentication(config);
     ;

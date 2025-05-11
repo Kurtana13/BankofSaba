@@ -25,8 +25,7 @@ namespace BankofSaba.API.Models
         public string IsActive { get; set; } = "A";
 
         public string UserId { get; set; }
-        public User User { get; set; } = null!;
-
+        public User User { get; set; } = null!; 
 
         public static async Task<Account> CreateAsync(string accountName, ApplicationDbContext context)
         {
